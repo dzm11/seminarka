@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="glide.core.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Seminarka</title>
+</head>
+
+<body>
+    <header>
+        <p>Logo</p>
+        <nav>
+            <ul>
+                <li>Strona1</li>
+                <li>Strona2</li>
+                <li>Strona3</li>
+                <li>Strona4</li>
+            </ul>
+        </nav>
+    </header>
+    <section class="section-1">
+        <video src="cinematic.mp4" autoplay loop muted></video>
+        <div class="shader">
+            <h1>Born once again</h1>
+            <button>Try</button>
+        </div>
+    </section>
+    <section class="section-2">
+        <div class="left-col">
+            <div class="top-wrapper">
+                <h2>Plan treningowy</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis minima suscipit sint! Illo veritatis excepturi quaerat inventore libero in ab qui reprehenderit hic alias exercitationem minima quo quam, eaque amet.</p>
+            </div>
+            <p>{jakieś dojebane foto}</p>
+        </div>
+        <div class="right-col">
+            <div class="top-wrapper">
+                <h2>Plan żywieniowy</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis minima suscipit sint! Illo veritatis excepturi quaerat inventore libero in ab qui reprehenderit hic alias exercitationem minima quo quam, eaque amet.</p>
+            </div>
+            <p>{jakieś dojebane foto}</p>
+        </div>
+    </section>
+    <section class="section-3">
+        <h2>Our crew</h2>
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <div class="glide__slide">
+                    <img src="fighter.png" alt="">
+                    <p>{imie}</p>
+                    <p>{nazwisko}</p>
+                </div>
+                <div class="glide__slide">
+                    <img src="fighter.png" alt="">
+                    <p>{imie}</p>
+                    <p>{nazwisko}</p>
+                </div>
+                <div class="glide__slide">
+                    <img src="fighter.png" alt="">
+                    <p>{imie}</p>
+                    <p>{nazwisko}</p>
+                </div>
+                <div class="glide__slide">
+                    <img src="fighter.png" alt="">
+                    <p>{imie}</p>
+                    <p>{nazwisko}</p>
+                </div>
+                <div class="glide__slide">
+                    <img src="fighter.png" alt="">
+                    <p>{imie}</p>
+                    <p>{nazwisko}</p>
+                </div>
+                <div class="glide__slide">
+                    <img src="fighter.png" alt="">
+                    <p>{imie}</p>
+                    <p>{nazwisko}</p>
+                </div>
+                <div class="glide__slide">
+                    <img src="fighter.png" alt="">
+                    <p>{imie}</p>
+                    <p>{nazwisko}</p>
+                </div>
+                <div class="glide__slide">
+                    <img src="fighter.png" alt="">
+                    <p>{imie}</p>
+                    <p>{nazwisko}</p>
+                </div>
+                <div class="glide__slide">
+                    <img src="fighter.png" alt="">
+                    <p>{imie}</p>
+                    <p>{nazwisko}</p>
+                </div>
+              </ul>
+            </div>
+          </div>
+    </section>
+    <section class="section-4">
+        <div class="left-col">
+            <div class="top-wrapper">
+                <h2>Kontakt</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis minima suscipit sint! Illo veritatis excepturi quaerat inventore libero in ab qui reprehenderit hic alias exercitationem minima quo quam, eaque amet.</p>
+            </div>
+        </div>
+        <div class="right-col">
+            <form action="">
+                <input type="text">
+                <input type="text">
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <input type="submit">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="left-col">
+           <p>{dojebana stopka}</p>
+        </div>
+        <div class="right-col">
+            <p>{dojebana stopka}</p>
+        </div>
+    </footer>
+    <script src="glide.js"></script>
+    <script>
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll',()=>{
+            var height = window.innerHeight;
+
+            if(window.scrollY >= height){
+                header.querySelector('nav').style.color = '#990000';
+                if(window.scrollY >= 3*height){
+                header.querySelector('nav').style.color = '#fff';
+            }
+            }else{
+                header.querySelector('nav').style.color = '#fff';
+            }
+
+            if(window.scrollY >= 2*height){
+                header.querySelector('p').style.color = "#990000"
+            }else{
+                header.querySelector('p').style.color = "#fff"
+            }
+        })
+    </script>
+    <script>
+        new Glide('.glide',{
+            type: 'carousel',
+            perView: 3,
+            autoplay: 4000,
+            animationDuration: 2000,
+        }).mount()
+    </script>
+</body>
+
+</html>
